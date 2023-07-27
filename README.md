@@ -12,9 +12,9 @@ Learn to earn
 Học hỏi, kết nối và kiếm tiền
 
 ## Phạm vi dự án
-- Học hỏi: Q&A, Tutorial, Docs tiếng việt
-- Kết nối: Open Profile
-- Kiếm tiền: Mạng việc làm: Fulltime, Parttime và sản phẩm mạo hiểm
+- Modul Học hỏi: Q&A, Tutorial, Docs tiếng việt
+- Modul Kết nối: Open Profile
+- Modul Kiếm tiền: Mạng việc làm: Fulltime, Parttime và sản phẩm mạo hiểm
 
 
 ## Đội ngũ
