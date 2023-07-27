@@ -29,7 +29,7 @@ Học hỏi, kết nối và kiếm tiền
 - Được để link trực tiếp tới Open Profile ở trang chủ, thứ hạng tùy thuộc vào mức độ bạn đóng góp
 ## Token
 - Tổng cung: 1,000,000,000 (một tỉ token)
-- Phát hành 1,000,000 token tương đương 1000$ đầu tiên để gia hạn domain 10 năm, hosting và chi phí khởi tạo khác. Những AE nào mua đợt này có tên trong hội đồng quản trị
+- Phát hành 1,000,000 token (1/1000) tương đương 1000$ đầu tiên để gia hạn domain 10 năm, hosting và chi phí khởi tạo khác. Những AE nào mua đợt này có tên trong hội đồng quản trị
 - Các đợt phát hành tiếp theo chia theo quy tắc 20/80 (80% chia cho những người đóng góp xây dựng cộng đồng, 20% tổng số token phát hành tiếp theo chia cho Hội dồng quản trị)
 ## RoastMap
 - 27/7 Đăng ký domain, build bản đầu tiên, kêu gọi cộng đồng
