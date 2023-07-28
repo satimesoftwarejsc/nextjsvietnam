@@ -2,6 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Home() {
+  const ok = 40
+  const phantram = ok / 1000 * 100
   return (
     <div className="hero min-h-screen" style={{ backgroundImage: 'url(wallpaper.jpg)' }}>
       <div className="hero-overlay bg-opacity-60"></div>
@@ -13,6 +15,14 @@ export default function Home() {
             <Image className=' rounded-full w-10 h-10 mr-2' src='/git.png' width={50} height={50} alt='Open Source'></Image>
             <p className='my-auto'>Git Clone</p>
           </Link>
+          <div className="form-control w-full">
+            <label className="label">
+              <span className="label-text">Tiến độ</span>
+              <span className="label-text-alt">{ok}/1000 $</span>
+            </label>
+            <progress className="progress progress-primary w-full h-6" value={phantram} max="100"></progress>
+            <Link href={'https://docs.google.com/forms/d/e/1FAIpQLScBs4yXuMLKmX0tdXTvfEUCFWhqofISeGs881wdrGgw08uiiQ/viewform'} className='my-auto mt-2'>Tham gia hội đồng</Link>
+          </div>
 
         </div>
       </div>
