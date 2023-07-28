@@ -31,5 +31,5 @@ Học hỏi, kết nối và kiếm tiền
 - Tổng cung: 1,000,000,000 (một tỉ token)
 - Phát hành 1,000,000 token (1/1000) tương đương 1000$ đầu tiên để gia hạn domain 10 năm, hosting và chi phí khởi tạo khác. Những AE nào mua đợt này có tên trong hội đồng quản trị
 - Các đợt phát hành tiếp theo chia theo quy tắc 20/80 (80% chia cho những người đóng góp xây dựng cộng đồng, 20% tổng số token phát hành tiếp theo chia cho Hội dồng quản trị)
-## RoastMap
+## RoadMap
 - 27/7 Đăng ký domain, build bản đầu tiên, kêu gọi cộng đồng
