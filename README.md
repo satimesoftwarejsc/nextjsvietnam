@@ -18,16 +18,16 @@ Học hỏi, kết nối và kiếm tiền
 
 
 ## Đội ngũ
-- Founder/Sáng lập: 1
-- Board Of Management/Hội đồng quản trị: x
-- Business Analyst Team/Đội phân tích nghiệp vụ: x
-- Design team/Đội thiết kế: 1
-  -- @Hoàng Anh
-- Development Team/Đội phát triển dự án: x
-  -- BE:
-  -- FE:
-    --- @Huy Hoàng
-- Testing team/Đội kiểm thử: x
+1.Founder/Sáng lập: 1
+2.Board Of Management/Hội đồng quản trị: x
+3.Business Analyst Team/Đội phân tích nghiệp vụ: x
+4.Design team/Đội thiết kế: 1
+  - @Hoàng Anh
+5.Development Team/Đội phát triển dự án: x
+  - BE:
+  - FE:
+    - @Huy Hoàng
+6.Testing team/Đội kiểm thử: x
 ### Quyền lợi khi bạn tham gia đội ngũ
 - Được để link trực tiếp tới Open Profile ở trang chủ, thứ hạng tùy thuộc vào mức độ bạn đóng góp
 ## Token
