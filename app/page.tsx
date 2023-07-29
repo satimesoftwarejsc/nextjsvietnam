@@ -32,7 +32,7 @@ export default function Home() {
             </Link>
             <Link href={'https://meet.google.com/nbb-ywbb-gmn'} className=' flex flex-row justify-center border border-slate-500 rounded p-2'>
               <Image className=' rounded-full w-6 h-6 mr-2' src='/meet.png' width={50} height={50} alt='Open Source'></Image>
-              <p className='my-auto'>Discord Group</p>
+              <p className='my-auto'>Meet link</p>
             </Link>
           </div>
 
