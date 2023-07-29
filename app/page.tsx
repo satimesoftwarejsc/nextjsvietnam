@@ -3,11 +3,31 @@ import Link from 'next/link'
 import TeamMember from './_components/teammember'
 import * as Icon from 'react-feather';
 
+/* Check token Nextjs */
+async function getData() {
+  const res = await fetch('https://api.ftmscan.com/api?module=account&action=tokenbalance&contractaddress=0xB8058e311B451406Bff63A11582b740A806b09e4&address=0xc502f799d90b694b815800b61b1d790f91cb2190&tag=latest&apikey=HW22AY1CVQUQWNH5F527R8TIPDGJ77ZYEK')
+  // The return value is *not* serialized
+  // You can return Date, Map, Set, etc.
+ 
+  // Recommendation: handle errors
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error('Failed to fetch data')
+  }
+ 
+  return res.json()
+}
 
-export default function Home() {
-  const ok = 40
-  const phantram = ok / 1000 * 100
+export default async function Home() {
+
+  const data = await getData()
+  //console.log(data);
+  const remainingBalanceToken = data.result.replace('000000000000000000','')
+  const hasSend = 1000000 - parseInt(remainingBalanceToken)
+  //console.log('remainingBalanceToken: ',remainingBalanceToken);
+  const phantram = hasSend / 1000000 *100
   const teamNumber = [1, 2, 3, 4, 5, 6, 7, 8]
+  /*  */
   return (
     <div className="hero min-h-screen" style={{ backgroundImage: 'url(wallpaper.jpg)' }}>
       <div className="hero-overlay bg-opacity-60"></div>
@@ -43,7 +63,7 @@ export default function Home() {
             </div>
             <label className="label">
               <span className="label-text">Tiến độ</span>
-              <span className="label-text-alt">{ok}/1000 $</span>
+              <span className="label-text-alt flex flex-row">{hasSend.toLocaleString('it-IT')}/1.000.000 <Link href={'https://ftmscan.com/token/0xb8058e311b451406bff63a11582b740a806b09e4'} className='ml-2 underline'>NextJs</Link></span>
 
             </label>
             <progress className="progress progress-primary w-full h-6" value={phantram} max="100"></progress>
@@ -67,3 +87,4 @@ export default function Home() {
     </div>
   )
 }
+
