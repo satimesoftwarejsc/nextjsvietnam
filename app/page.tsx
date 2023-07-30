@@ -94,7 +94,7 @@ export default async function Home() {
             </div>
             <label className="label">
               <span className="label-text">Tiến độ</span>
-              <span className="label-text-alt flex flex-row">{hasSendBom.toLocaleString('it-IT')}/1.000.000 <Link href={'https://ftmscan.com/token/0xb8058e311b451406bff63a11582b740a806b09e4'} className='ml-2 underline'>NextJs</Link></span>
+              <span className="label-text-alt flex flex-row">{hasSendBom.toLocaleString('it-IT')}/1.000.000 <Link href={'https://ftmscan.com/token/0xb8058e311b451406bff63a11582b740a806b09e4?a=0xc502f799d90b694b815800b61b1d790f91cb2190'} className='ml-2 underline'>NextJs</Link></span>
 
             </label>
             <progress className="progress progress-primary w-full h-6" value={phantramBom} max="100"></progress>
@@ -102,7 +102,7 @@ export default async function Home() {
 
           <div className="form-control w-full ">
             <div className='flex justify-center ...'>
-              <Link href={'https://docs.google.com/forms/d/1yQyCcLNuhgOCGm9Ylz7V3GvbxCRhf0cE39yxlghZ7yo/edit?pli=1'} className=' underline my-auto mt-2 flex flex-row'>Nhận Airdrop1 <Icon.ExternalLink className='ml-2 w-4 h-4' /></Link>
+              <Link href={'https://docs.google.com/forms/d/1yQyCcLNuhgOCGm9Ylz7V3GvbxCRhf0cE39yxlghZ7yo/edit?pli=1'} className=' underline my-auto mt-2 flex flex-row'>Nhận Airdrop #1 <Icon.ExternalLink className='ml-2 w-4 h-4' /></Link>
 
             </div>
             <label className="label">
@@ -125,6 +125,10 @@ export default async function Home() {
                 )
               })}
             </div>
+          </div>
+          <div className='flex justify-center ...'>
+            <p className="mb-5 text-sm flex flex-row"><Icon.Mail className='mr-2 w-4 h-4' />Email: admin@nextjsvietnam.org</p>
+
           </div>
         </div>
       </div>
