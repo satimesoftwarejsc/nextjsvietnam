@@ -21,18 +21,19 @@ Học hỏi, kết nối và kiếm tiền
 
 ## Đội ngũ
 - Founder/Sáng lập: 1
-- Board Of Management/Hội đồng quản trị: x
-- Business Analyst Team/Đội phân tích nghiệp vụ: x
-- Design team/Đội thiết kế: 1
+- Board Of Management/Hội đồng quản trị: 2
+- Business Analyst Team/Đội phân tích nghiệp vụ: 0
+- Design team/Đội thiết kế: 0
   - 
-- Development Team/Đội phát triển dự án: x
-  - BE: 
+- Development Team/Đội phát triển dự án: 15
+  - BE: 7
    - Leader: Khoa Trần
-   - Member: 
-  - FE: 
+   - Sub Leader: Mr Quân, Mr Tuấn Anh
+   - Member: 4
+  - FE: 8
     - Leader: Chung Lê Bá
-    - Member: 
-- Testing team/Đội kiểm thử: x
+    - Member: 4
+- Testing team/Đội kiểm thử: 0
 ### Quyền lợi khi bạn tham gia đội ngũ
 - Được để link trực tiếp tới Open Profile ở trang chủ (Link dofllow), thứ hạng tùy thuộc vào mức độ bạn đóng góp
 ## Token
