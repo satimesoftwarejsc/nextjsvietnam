@@ -24,7 +24,6 @@ Học hỏi, kết nối và kiếm tiền
 - Board Of Management/Hội đồng quản trị: 2
 - Business Analyst Team/Đội phân tích nghiệp vụ: 0
 - Design team/Đội thiết kế: 0
-  - 
 - Development Team/Đội phát triển dự án: 15
   - BE: 7
    - Leader: Khoa Trần
