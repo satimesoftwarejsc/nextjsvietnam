@@ -2,39 +2,70 @@ import Image from 'next/image'
 import Link from 'next/link'
 import TeamMember from './_components/teammember'
 import * as Icon from 'react-feather';
+import { Metadata } from 'next'
+
+
+export const metadata: Metadata = {
+  title: 'NextJs Viet Nam',
+  description: 'Learn to earn | Official communication NextJs Viet Nam',
+}
 
 /* Check token Nextjs */
-async function getData() {
+async function getBom() {
   const res = await fetch('https://api.ftmscan.com/api?module=account&action=tokenbalance&contractaddress=0xB8058e311B451406Bff63A11582b740A806b09e4&address=0xc502f799d90b694b815800b61b1d790f91cb2190&tag=latest&apikey=HW22AY1CVQUQWNH5F527R8TIPDGJ77ZYEK')
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
- 
+
   // Recommendation: handle errors
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
     throw new Error('Failed to fetch data')
   }
- 
+
+  return res.json()
+}
+
+async function getAidrop1() {
+  const res = await fetch('https://api.ftmscan.com/api?module=account&action=tokenbalance&contractaddress=0xB8058e311B451406Bff63A11582b740A806b09e4&address=0xc78fd70a999a938ed939809fedd40e744d8c2bd9&tag=latest&apikey=HW22AY1CVQUQWNH5F527R8TIPDGJ77ZYEK')
+  // The return value is *not* serialized
+  // You can return Date, Map, Set, etc.
+
+  // Recommendation: handle errors
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error('Failed to fetch data')
+  }
+
   return res.json()
 }
 
 export default async function Home() {
-
-  const data = await getData()
-  //console.log(data);
-  const remainingBalanceToken = data.result.replace('000000000000000000','')
-  const hasSend = 1000000 - parseInt(remainingBalanceToken)
-  //console.log('remainingBalanceToken: ',remainingBalanceToken);
-  const phantram = hasSend / 1000000 *100
-  const teamNumber = [1, 2, 3, 4, 5, 6, 7, 8]
   /*  */
+  const teamNumber = [1, 2, 3, 4, 5, 6, 7, 8]
+
+  /* Hội đồng */
+  const bom = await getBom()
+  //console.log(bom);
+  const remainingBalanceToken = bom.result.replace('000000000000000000', '')
+  const hasSendBom = 1000000 - parseInt(remainingBalanceToken)
+  //console.log('remainingBalanceToken: ',remainingBalanceToken);
+  const phantramBom = hasSendBom / 1000000 * 100
+
+  /* Team */
+  const airdrop1 = await getAidrop1()
+  //console.log(bom);
+  const remainingBalanceTokenAirdrop1 = airdrop1.result.replace('000000000000000000', '')
+  const hasSendAirdrop1 = 1000000 - parseInt(remainingBalanceTokenAirdrop1)
+  //console.log('remainingBalanceTokenAirdrop1: ',remainingBalanceTokenAirdrop1);
+  const phantramAirdrop1 = hasSendAirdrop1 / 1000000 * 100
+
   return (
     <div className="hero min-h-screen" style={{ backgroundImage: 'url(wallpaper.jpg)' }}>
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content text-center text-neutral-content">
         <div className="max-w-md justify-items-center space-y-10">
           <div>
-            <h1 className="mt-5 text-5xl font-bold">NEXTJS VIET NAM</h1>
+            <h1 className="mt-5 text-3xl font-bold">NEXTJS VIET NAM</h1>
             <p className="mb-5 animate-pulse">Wellcome to NextJs Viet Nam, please support to build it !</p>
           </div>
           <div className='grid grid-cols-2 gap-5'>
@@ -63,10 +94,23 @@ export default async function Home() {
             </div>
             <label className="label">
               <span className="label-text">Tiến độ</span>
-              <span className="label-text-alt flex flex-row">{hasSend.toLocaleString('it-IT')}/1.000.000 <Link href={'https://ftmscan.com/token/0xb8058e311b451406bff63a11582b740a806b09e4'} className='ml-2 underline'>NextJs</Link></span>
+              <span className="label-text-alt flex flex-row">{hasSendBom.toLocaleString('it-IT')}/1.000.000 <Link href={'https://ftmscan.com/token/0xb8058e311b451406bff63a11582b740a806b09e4'} className='ml-2 underline'>NextJs</Link></span>
 
             </label>
-            <progress className="progress progress-primary w-full h-6" value={phantram} max="100"></progress>
+            <progress className="progress progress-primary w-full h-6" value={phantramBom} max="100"></progress>
+          </div>
+
+          <div className="form-control w-full ">
+            <div className='flex justify-center ...'>
+              <Link href={'https://docs.google.com/forms/d/1yQyCcLNuhgOCGm9Ylz7V3GvbxCRhf0cE39yxlghZ7yo/edit?pli=1'} className=' underline my-auto mt-2 flex flex-row'>Nhận Airdrop1 <Icon.ExternalLink className='ml-2 w-4 h-4' /></Link>
+
+            </div>
+            <label className="label">
+              <span className="label-text">Tiến độ</span>
+              <span className="label-text-alt flex flex-row">{hasSendAirdrop1.toLocaleString('it-IT')}/1.000.000 <Link href={'https://ftmscan.com/token/0xb8058e311b451406bff63a11582b740a806b09e4?a=0xc78fd70a999a938ed939809fedd40e744d8c2bd9'} className='ml-2 underline'>NextJs</Link></span>
+
+            </label>
+            <progress className="progress progress-secondary w-full h-3" value={phantramAirdrop1} max="100"></progress>
           </div>
           <div className="form-control w-full">
             <div className='flex justify-center ...'>
