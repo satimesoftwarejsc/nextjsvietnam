@@ -45,3 +45,10 @@ Học hỏi, kết nối và kiếm tiền
   - Đã chốt được phạm vi dự án
   - Đã bầu được 2 leader FE/BE
   - Airdrop lần 1: Kiểm tra sổ cái: [#1 Airdrop wallet](https://ftmscan.com/token/0xb8058e311b451406bff63a11582b740a806b09e4?a=0xc78fd70a999a938ed939809fedd40e744d8c2bd9)
+- 30/7 FE Meet #1:
+  - Chi tiết phân công:
+    - Nguyễn Thành Đạt: Trang danh sách câu hỏi: feature/1-trang-danh-sach-cau-hoi
+    - Lê Trọng Hiệp: Trang thêm câu hỏi: feature/2-tao-moi-cau-hoi
+    - Hoàng Phi Hùng: Trang chi tiết câu trả lời: feature/3-chi-tiet-cau-tra-loi
+    - Xuân Anh: Profile team: feature/4-team-profile
+    
