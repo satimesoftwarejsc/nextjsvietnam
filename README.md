@@ -49,6 +49,6 @@ Học hỏi, kết nối và kiếm tiền
   - Chi tiết phân công:
     - Nguyễn Thành Đạt: Trang danh sách câu hỏi: feature/1-trang-danh-sach-cau-hoi
     - Lê Trọng Hiệp: Trang thêm câu hỏi: feature/2-tao-moi-cau-hoi
-    - Hoàng Phi Hùng: Trang chi tiết câu trả lời: feature/3-chi-tiet-cau-tra-loi
+    - Hoàng Phi Hùng/NamDP: Trang chi tiết câu trả lời: feature/3-chi-tiet-cau-tra-loi
     - Xuân Anh: Profile team: feature/4-team-profile
     
