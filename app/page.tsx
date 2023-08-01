@@ -1,8 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import TeamMember from './_components/teammember'
 import BomMember from './_components/bomMember'
 import DevMember from './_components/devMember'
+import UserMember from './_components/userMember'
+
+
 import * as Icon from 'react-feather';
 import { Metadata } from 'next'
 
@@ -115,20 +117,7 @@ export default async function Home() {
               </label>
               <progress className="progress progress-secondary w-full h-3" value={phantramAirdrop1} max="100"></progress>
             </div>
-            <div className="form-control w-full">
-              <div className='flex justify-center ...'>
-                <Link href={'https://docs.google.com/forms/d/e/1FAIpQLSfUzeFIkK-zmwybFhiSjWEMImqpw4EG3K3g5f2wpuPYPT8-4Q/viewform'} className=' underline my-auto mt-2 flex flex-row'>Tham gia đội phát triển<Icon.ExternalLink className='ml-2 w-4 h-4' /></Link>
-              </div>
-              <div className=' grid grid-cols-4 gap-5 mt-5'>
-                {teamNumber.map((e, i) => {
-                  return (
-                    <>
-                      <TeamMember></TeamMember>
-                    </>
-                  )
-                })}
-              </div>
-            </div>
+
             <div className='flex justify-center ...'>
               <p className="mb-5 text-sm flex flex-row"><Icon.Mail className='mr-2 w-4 h-4' />Email: admin@nextjsvietnam.org</p>
 
@@ -139,9 +128,14 @@ export default async function Home() {
       </div>
       <div className='hero min-h-screen justify-items-center '>
         <div className='max-w-xl text-center'>
-          <h2 className=' text-3xl font-black'>Team</h2>
-          <p className=' font-light'>Đội ngũ quản lý</p>
-          <h3 className=' text-xl font-bold mt-5'>Board of management</h3>
+          <h2 className=' text-3xl font-black'>Đội ngũ</h2>
+          <p className='font-light justify-center ...'>
+            Với mong muốn NextJsVietNam.Org là nơi học hỏi, trao đổi kiến thực của cộng đồng.
+            Ngày 27/7 chúng tôi đã bắt tay vào phát triển.</p>
+          <h3 className=' text-xl font-medium mt-5'>Hội đồng</h3>
+          <div className='flex font-light justify-center ...'>
+            <Link href={'https://docs.google.com/forms/d/e/1FAIpQLScBs4yXuMLKmX0tdXTvfEUCFWhqofISeGs881wdrGgw08uiiQ/viewform'} className=' underline my-auto mt-2 flex flex-row'>Tham gia<Icon.ExternalLink className='ml-2 w-4 h-4' /></Link>
+          </div>
           <div className=' grid grid-cols-6 gap-5 mt-5 justify-items-center'>
             <BomMember></BomMember>
             <BomMember></BomMember>
@@ -150,7 +144,10 @@ export default async function Home() {
             <BomMember></BomMember>
             <BomMember></BomMember>
           </div>
-          <h3 className=' text-xl font-bold mt-5'>Development team</h3>
+          <h3 className=' text-xl font-medium mt-5'>Nhóm phát triển</h3>
+          <div className='flex font-light justify-center ...'>
+            <Link href={'https://docs.google.com/forms/d/e/1FAIpQLSfUzeFIkK-zmwybFhiSjWEMImqpw4EG3K3g5f2wpuPYPT8-4Q/viewform'} className=' underline my-auto flex flex-row'>Tham gia<Icon.ExternalLink className='ml-2 w-4 h-4' /></Link>
+          </div>
           <div className=' grid grid-cols-10 gap-5 mt-5 justify-items-center'>
             <DevMember></DevMember>
             <DevMember></DevMember>
@@ -162,28 +159,39 @@ export default async function Home() {
             <DevMember></DevMember>
             <DevMember></DevMember>
             <DevMember></DevMember>
-            <DevMember></DevMember>
-            <DevMember></DevMember>
-            <DevMember></DevMember>
-            <DevMember></DevMember>
-            <DevMember></DevMember>
-            <DevMember></DevMember>
-            <DevMember></DevMember>
-            <DevMember></DevMember>
-            <DevMember></DevMember>
-            <DevMember></DevMember>
-            <DevMember></DevMember>
-            <DevMember></DevMember>
-            <DevMember></DevMember>
-            <DevMember></DevMember>
-            <DevMember></DevMember>
-            <DevMember></DevMember>
-            <DevMember></DevMember>
-            <DevMember></DevMember>
-            <DevMember></DevMember>
-            <DevMember></DevMember>
           </div>
-          
+          <h3 className=' text-xl font-medium mt-5'>Thành viên</h3>
+          <div className='flex font-light justify-center ...'>
+            <Link href={'#'} className=' underline my-auto flex flex-row'>Đăng ký<Icon.ExternalLink className='ml-2 w-4 h-4' /></Link>
+          </div>
+          <div className=' grid grid-cols-12 gap-5 mt-5 justify-items-center'>
+            <UserMember></UserMember>
+            <UserMember></UserMember>
+            <UserMember></UserMember>
+            <UserMember></UserMember>
+            <UserMember></UserMember>
+            <UserMember></UserMember>
+            <UserMember></UserMember>
+            <UserMember></UserMember>
+            <UserMember></UserMember>
+            <UserMember></UserMember>
+            <UserMember></UserMember>
+            <UserMember></UserMember>
+            
+            <UserMember></UserMember>
+            <UserMember></UserMember>
+            <UserMember></UserMember>
+            <UserMember></UserMember>
+            <UserMember></UserMember>
+            <UserMember></UserMember>
+            <UserMember></UserMember>
+            <UserMember></UserMember>
+            <UserMember></UserMember>
+            <UserMember></UserMember>
+            <UserMember></UserMember>
+            <UserMember></UserMember>
+          </div>
+
         </div>
 
       </div>
