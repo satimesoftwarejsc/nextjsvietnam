@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import TeamMember from './_components/teammember'
+import BomMember from './_components/bomMember'
+import DevMember from './_components/devMember'
 import * as Icon from 'react-feather';
 import { Metadata } from 'next'
 
@@ -60,79 +62,133 @@ export default async function Home() {
   const phantramAirdrop1 = hasSendAirdrop1 / 1000000 * 100
 
   return (
-    <div className="hero min-h-screen" style={{ backgroundImage: 'url(wallpaper.jpg)' }}>
-      <div className="hero-overlay bg-opacity-60"></div>
-      <div className="hero-content text-center text-neutral-content">
-        <div className="max-w-md justify-items-center space-y-10">
-          <div>
-            <h1 className="mt-5 text-3xl font-bold">NEXTJS VIET NAM</h1>
-            <p className="mb-5 animate-pulse">Wellcome to NextJs Viet Nam, please support to build it !</p>
-          </div>
-          <div className='grid grid-cols-2 gap-5'>
-            <Link href={'https://github.com/ChungLeba/nextjsvietnam'} className='flex flex-row justify-center border border-slate-500 rounded p-2'>
-              <Image className=' rounded-full w-6 h-6 mr-2' src='/git.png' width={50} height={50} alt='Open Source'></Image>
-              <p className='my-auto'>Git Clone</p>
-            </Link>
-            <Link href={'https://zalo.me/g/lmptrj280'} className='flex flex-row justify-center border border-slate-500 rounded p-2'>
-              <Image className=' rounded-full w-6 h-6 mr-2' src='/zalo.png' width={50} height={50} alt='Open Source'></Image>
-              <p className='my-auto'>Zalo Group</p>
-            </Link>
-            <Link href={'https://discord.gg/fhruv6GR'} className='flex flex-row justify-center border border-slate-500 rounded p-2'>
-              <Image className=' rounded-full w-6 h-6 mr-2' src='/discord.png' width={50} height={50} alt='Open Source'></Image>
-              <p className='my-auto'>Discord Group</p>
-            </Link>
-            <Link href={'https://meet.google.com/nbb-ywbb-gmn'} className=' flex flex-row justify-center border border-slate-500 rounded p-2'>
-              <Image className=' rounded-full w-6 h-6 mr-2' src='/meet.png' width={50} height={50} alt='Open Source'></Image>
-              <p className='my-auto'>Meet link</p>
-            </Link>
-          </div>
+    <>
+      <div className="hero min-h-screen" style={{ backgroundImage: 'url(wallpaper.jpg)' }}>
+        <div className="hero-overlay bg-opacity-60"></div>
+        <div className="hero-content text-center text-neutral-content overflow-y-auto">
+          <div className="max-w-md justify-items-center space-y-10">
+            <div>
+              <h1 className="mt-5 text-3xl font-bold">NEXTJS VIET NAM</h1>
+              <p className="mb-5 animate-pulse">Wellcome to NextJs Viet Nam, please support to build it !</p>
+            </div>
+            <div className='grid grid-cols-2 gap-5'>
+              <Link href={'https://github.com/ChungLeba/nextjsvietnam'} className='flex flex-row justify-center border border-slate-500 rounded p-2'>
+                <Image className=' rounded-full w-6 h-6 mr-2' src='/git.png' width={50} height={50} alt='Open Source'></Image>
+                <p className='my-auto'>Git Clone</p>
+              </Link>
+              <Link href={'https://zalo.me/g/lmptrj280'} className='flex flex-row justify-center border border-slate-500 rounded p-2'>
+                <Image className=' rounded-full w-6 h-6 mr-2' src='/zalo.png' width={50} height={50} alt='Open Source'></Image>
+                <p className='my-auto'>Zalo Group</p>
+              </Link>
+              <Link href={'https://discord.gg/fhruv6GR'} className='flex flex-row justify-center border border-slate-500 rounded p-2'>
+                <Image className=' rounded-full w-6 h-6 mr-2' src='/discord.png' width={50} height={50} alt='Open Source'></Image>
+                <p className='my-auto'>Discord Group</p>
+              </Link>
+              <Link href={'https://meet.google.com/nbb-ywbb-gmn'} className=' flex flex-row justify-center border border-slate-500 rounded p-2'>
+                <Image className=' rounded-full w-6 h-6 mr-2' src='/meet.png' width={50} height={50} alt='Open Source'></Image>
+                <p className='my-auto'>Meet link</p>
+              </Link>
+            </div>
 
-          <div className="form-control w-full ">
+            <div className="form-control w-full ">
+              <div className='flex justify-center ...'>
+                <Link href={'https://docs.google.com/forms/d/e/1FAIpQLScBs4yXuMLKmX0tdXTvfEUCFWhqofISeGs881wdrGgw08uiiQ/viewform'} className=' underline my-auto mt-2 flex flex-row'>Tham gia hội đồng <Icon.ExternalLink className='ml-2 w-4 h-4' /></Link>
+
+              </div>
+              <label className="label">
+                <span className="label-text">Tiến độ</span>
+                <span className="label-text-alt flex flex-row">{hasSendBom.toLocaleString('it-IT')}/1.000.000 <Link href={'https://ftmscan.com/token/0xb8058e311b451406bff63a11582b740a806b09e4?a=0xc502f799d90b694b815800b61b1d790f91cb2190'} className='ml-2 underline'>NextJs</Link></span>
+
+              </label>
+              <progress className="progress progress-primary w-full h-6" value={phantramBom} max="100"></progress>
+            </div>
+
+            <div className="form-control w-full ">
+              <div className='flex justify-center ...'>
+                <Link href={'https://docs.google.com/forms/d/1yQyCcLNuhgOCGm9Ylz7V3GvbxCRhf0cE39yxlghZ7yo/edit?pli=1'} className=' underline my-auto mt-2 flex flex-row'>Nhận Airdrop #1 <Icon.ExternalLink className='ml-2 w-4 h-4' /></Link>
+
+              </div>
+              <label className="label">
+                <span className="label-text">Tiến độ</span>
+                <span className="label-text-alt flex flex-row">{hasSendAirdrop1.toLocaleString('it-IT')}/1.000.000 <Link href={'https://ftmscan.com/token/0xb8058e311b451406bff63a11582b740a806b09e4?a=0xc78fd70a999a938ed939809fedd40e744d8c2bd9'} className='ml-2 underline'>NextJs</Link></span>
+
+              </label>
+              <progress className="progress progress-secondary w-full h-3" value={phantramAirdrop1} max="100"></progress>
+            </div>
+            <div className="form-control w-full">
+              <div className='flex justify-center ...'>
+                <Link href={'https://docs.google.com/forms/d/e/1FAIpQLSfUzeFIkK-zmwybFhiSjWEMImqpw4EG3K3g5f2wpuPYPT8-4Q/viewform'} className=' underline my-auto mt-2 flex flex-row'>Tham gia đội phát triển<Icon.ExternalLink className='ml-2 w-4 h-4' /></Link>
+              </div>
+              <div className=' grid grid-cols-4 gap-5 mt-5'>
+                {teamNumber.map((e, i) => {
+                  return (
+                    <>
+                      <TeamMember></TeamMember>
+                    </>
+                  )
+                })}
+              </div>
+            </div>
             <div className='flex justify-center ...'>
-              <Link href={'https://docs.google.com/forms/d/e/1FAIpQLScBs4yXuMLKmX0tdXTvfEUCFWhqofISeGs881wdrGgw08uiiQ/viewform'} className=' underline my-auto mt-2 flex flex-row'>Tham gia hội đồng <Icon.ExternalLink className='ml-2 w-4 h-4' /></Link>
+              <p className="mb-5 text-sm flex flex-row"><Icon.Mail className='mr-2 w-4 h-4' />Email: admin@nextjsvietnam.org</p>
 
             </div>
-            <label className="label">
-              <span className="label-text">Tiến độ</span>
-              <span className="label-text-alt flex flex-row">{hasSendBom.toLocaleString('it-IT')}/1.000.000 <Link href={'https://ftmscan.com/token/0xb8058e311b451406bff63a11582b740a806b09e4?a=0xc502f799d90b694b815800b61b1d790f91cb2190'} className='ml-2 underline'>NextJs</Link></span>
-
-            </label>
-            <progress className="progress progress-primary w-full h-6" value={phantramBom} max="100"></progress>
           </div>
 
-          <div className="form-control w-full ">
-            <div className='flex justify-center ...'>
-              <Link href={'https://docs.google.com/forms/d/1yQyCcLNuhgOCGm9Ylz7V3GvbxCRhf0cE39yxlghZ7yo/edit?pli=1'} className=' underline my-auto mt-2 flex flex-row'>Nhận Airdrop #1 <Icon.ExternalLink className='ml-2 w-4 h-4' /></Link>
-
-            </div>
-            <label className="label">
-              <span className="label-text">Tiến độ</span>
-              <span className="label-text-alt flex flex-row">{hasSendAirdrop1.toLocaleString('it-IT')}/1.000.000 <Link href={'https://ftmscan.com/token/0xb8058e311b451406bff63a11582b740a806b09e4?a=0xc78fd70a999a938ed939809fedd40e744d8c2bd9'} className='ml-2 underline'>NextJs</Link></span>
-
-            </label>
-            <progress className="progress progress-secondary w-full h-3" value={phantramAirdrop1} max="100"></progress>
-          </div>
-          <div className="form-control w-full">
-            <div className='flex justify-center ...'>
-              <Link href={'https://docs.google.com/forms/d/e/1FAIpQLSfUzeFIkK-zmwybFhiSjWEMImqpw4EG3K3g5f2wpuPYPT8-4Q/viewform'} className=' underline my-auto mt-2 flex flex-row'>Tham gia đội phát triển<Icon.ExternalLink className='ml-2 w-4 h-4' /></Link>
-            </div>
-            <div className=' grid grid-cols-4 gap-5 mt-5'>
-              {teamNumber.map((e, i) => {
-                return (
-                  <>
-                    <TeamMember></TeamMember>
-                  </>
-                )
-              })}
-            </div>
-          </div>
-          <div className='flex justify-center ...'>
-            <p className="mb-5 text-sm flex flex-row"><Icon.Mail className='mr-2 w-4 h-4' />Email: admin@nextjsvietnam.org</p>
-
-          </div>
         </div>
       </div>
-    </div>
+      <div className='hero min-h-screen justify-items-center '>
+        <div className='max-w-xl text-center'>
+          <h2 className=' text-3xl font-black'>Team</h2>
+          <p className=' font-light'>Đội ngũ quản lý</p>
+          <h3 className=' text-xl font-bold mt-5'>Board of management</h3>
+          <div className=' grid grid-cols-6 gap-5 mt-5 justify-items-center'>
+            <BomMember></BomMember>
+            <BomMember></BomMember>
+            <BomMember></BomMember>
+            <BomMember></BomMember>
+            <BomMember></BomMember>
+            <BomMember></BomMember>
+          </div>
+          <h3 className=' text-xl font-bold mt-5'>Development team</h3>
+          <div className=' grid grid-cols-10 gap-5 mt-5 justify-items-center'>
+            <DevMember></DevMember>
+            <DevMember></DevMember>
+            <DevMember></DevMember>
+            <DevMember></DevMember>
+            <DevMember></DevMember>
+            <DevMember></DevMember>
+            <DevMember></DevMember>
+            <DevMember></DevMember>
+            <DevMember></DevMember>
+            <DevMember></DevMember>
+            <DevMember></DevMember>
+            <DevMember></DevMember>
+            <DevMember></DevMember>
+            <DevMember></DevMember>
+            <DevMember></DevMember>
+            <DevMember></DevMember>
+            <DevMember></DevMember>
+            <DevMember></DevMember>
+            <DevMember></DevMember>
+            <DevMember></DevMember>
+            <DevMember></DevMember>
+            <DevMember></DevMember>
+            <DevMember></DevMember>
+            <DevMember></DevMember>
+            <DevMember></DevMember>
+            <DevMember></DevMember>
+            <DevMember></DevMember>
+            <DevMember></DevMember>
+            <DevMember></DevMember>
+            <DevMember></DevMember>
+          </div>
+          
+        </div>
+
+      </div>
+    </>
+
   )
 }
 
