@@ -71,7 +71,7 @@ export default async function Home() {
           <div className="max-w-md justify-items-center space-y-10">
             <div>
               <h1 className="mt-5 text-3xl font-bold">NEXTJS VIET NAM</h1>
-              <p className="mb-5 animate-pulse">Wellcome to NextJs Viet Nam, please support to build it !</p>
+              <p className="mb-5 animate-pulse">Trang đang xây dựng, nếu bạn có nhã hứng hãy tham gia cùng chúng tôi !</p>
             </div>
             <div className='grid grid-cols-2 gap-5'>
               <Link href={'https://github.com/ChungLeba/nextjsvietnam'} className='flex flex-row justify-center border border-slate-500 rounded p-2'>
@@ -130,7 +130,7 @@ export default async function Home() {
         <div className='max-w-xl text-center'>
           <h2 className=' text-3xl font-black'>Đội ngũ</h2>
           <p className='font-light justify-center ...'>
-            Với mong muốn NextJsVietNam.Org là nơi học hỏi, trao đổi kiến thực của cộng đồng,
+            Với mong muốn NextJsVietNam.Org là nơi học hỏi, trao đổi kiến thức của cộng đồng,
             ngày 27/7/2023 chúng tôi đã bắt tay vào phát triển cộng đồng NextJS Viet Nam.</p>
           <h3 className=' text-xl font-medium mt-5'>Hội đồng</h3>
           <div className='flex font-light justify-center ...'>
@@ -177,7 +177,7 @@ export default async function Home() {
             <UserMember></UserMember>
             <UserMember></UserMember>
             <UserMember></UserMember>
-            
+
             <UserMember></UserMember>
             <UserMember></UserMember>
             <UserMember></UserMember>
@@ -195,6 +195,73 @@ export default async function Home() {
         </div>
 
       </div>
+      <div className='w-full h-full p-5 py-10 justify-items-center ...'>
+        <div className='text-center'>
+          <h2 className=' text-3xl font-black mb-10'>Tiến độ xây dựng</h2>
+          <ol className="items-center text-start sm:flex">
+            <li className="relative mb-6 sm:mb-0">
+              <div className="flex items-center">
+                <div className="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
+                  <svg className="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                  </svg>
+                </div>
+                <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+              </div>
+              <div className="mt-3 sm:pr-8">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Khởi động</h3>
+                <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Thứ 7, ngày 27 tháng 7 năm 2023</time>
+                <p className="text-base font-normal text-gray-500 dark:text-gray-400">Đăng ký domain, kêu gọi cộng đồng, xây dựng đội phát triển.</p>
+              </div>
+            </li>
+            <li className="relative mb-6 sm:mb-0">
+              <div className="flex items-center">
+                <div className="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
+                  <svg className="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                  </svg>
+                </div>
+                <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+              </div>
+              <div className="mt-3 sm:pr-8">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Tính năng Q/A (Questions/Answers)</h3>
+                <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Thứ 3, ngày 1 tháng 8 năm 2023</time>
+                <p className="text-base font-normal text-gray-500 dark:text-gray-400">Xây dựng Frontend, xây dựng Backend, thiết kế giao diện cơ bản.</p>
+              </div>
+            </li>
+
+          </ol>
+        </div>
+
+      </div>
+      <footer className="footer p-10 bg-base-200 text-base-content">
+        <div className='flex flex-col'>
+          <Image className=' w-56' src='/nextjs-logo.png' width={300} height={100} alt='NextJs Viet Nam'></Image>
+          <p>Nextjsvietnam.org. Building since 2023</p>
+          <p className='-mt-2 text-xs'>Development by you.</p>
+        </div>
+        <div>
+          <span className="footer-title">Cộng đồng</span>
+          <a className="link link-hover">Người dùng</a>
+          <a className="link link-hover">Đội phát triển</a>
+          <a className="link link-hover">Thành viên</a>
+          <a className="link link-hover">Nhà tài trợ</a>
+          
+        </div>
+        <div>
+          <span className="footer-title">Tiện ích</span>
+          <a className="link link-hover">Hỏi/đáp</a>
+          <a className="link link-hover">Kinh nghiệm phát triển</a>
+          <a className="link link-hover">Tài liệu phát triển</a>
+          <a className="link link-hover">Tiện ích nhỏ</a>
+        </div>
+        <div>
+          <span className="footer-title">Pháp luật</span>
+          <a className="link link-hover">Chính sách sử dụng và quy định chung</a>
+          <a className="link link-hover">Chính sách bảo mật thông tin</a>
+          <a className="link link-hover">Chính sách quyền riêng tư</a>
+        </div>
+      </footer>
     </>
 
   )
