@@ -130,8 +130,8 @@ export default async function Home() {
         <div className='max-w-xl text-center'>
           <h2 className=' text-3xl font-black'>Đội ngũ</h2>
           <p className='font-light justify-center ...'>
-            Với mong muốn NextJsVietNam.Org là nơi học hỏi, trao đổi kiến thực của cộng đồng.
-            Ngày 27/7 chúng tôi đã bắt tay vào phát triển.</p>
+            Với mong muốn NextJsVietNam.Org là nơi học hỏi, trao đổi kiến thực của cộng đồng,
+            ngày 27/7/2023 chúng tôi đã bắt tay vào phát triển cộng đồng NextJS Viet Nam.</p>
           <h3 className=' text-xl font-medium mt-5'>Hội đồng</h3>
           <div className='flex font-light justify-center ...'>
             <Link href={'https://docs.google.com/forms/d/e/1FAIpQLScBs4yXuMLKmX0tdXTvfEUCFWhqofISeGs881wdrGgw08uiiQ/viewform'} className=' underline my-auto mt-2 flex flex-row'>Tham gia<Icon.ExternalLink className='ml-2 w-4 h-4' /></Link>
