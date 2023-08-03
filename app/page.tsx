@@ -76,8 +76,13 @@ export default async function Home() {
             <div className='grid grid-cols-2 gap-5'>
               <Link href={'https://github.com/ChungLeba/nextjsvietnam'} className='flex flex-row justify-center border border-slate-500 rounded p-2'>
                 <Image className=' rounded-full w-6 h-6 mr-2' src='/git.png' width={50} height={50} alt='Open Source'></Image>
-                <p className='my-auto'>Git Clone</p>
+                <p className='my-auto'>FE Git Clone</p>
               </Link>
+              <Link href={'https://github.com/khoaha1904/Next-be'} className='flex flex-row justify-center border border-slate-500 rounded p-2'>
+                <Image className=' rounded-full w-6 h-6 mr-2' src='/git.png' width={50} height={50} alt='Open Source'></Image>
+                <p className='my-auto'>BE Git Clone</p>
+              </Link>
+              
               <Link href={'https://zalo.me/g/lmptrj280'} className='flex flex-row justify-center border border-slate-500 rounded p-2'>
                 <Image className=' rounded-full w-6 h-6 mr-2' src='/zalo.png' width={50} height={50} alt='Open Source'></Image>
                 <p className='my-auto'>Zalo Group</p>
