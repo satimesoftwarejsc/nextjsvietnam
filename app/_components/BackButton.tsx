@@ -8,7 +8,7 @@ const BackButton: React.FC<Props> = ({ routeTo }) => {
   return (
     <a
       href={routeTo}
-      className="flex items-center hover:text-slate-700 duration-200 text-sm"
+      className="flex items-center hover:text-gray-200 duration-200 text-sm"
     >
       <svg
         data-v-40670dad=""
