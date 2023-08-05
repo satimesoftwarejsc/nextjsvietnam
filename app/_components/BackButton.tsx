@@ -6,10 +6,7 @@ interface Props {
 
 const BackButton: React.FC<Props> = ({ routeTo }) => {
   return (
-    <a
-      href={routeTo}
-      className="flex items-center hover:text-gray-200 duration-200 text-sm"
-    >
+    <a href={routeTo} className="flex items-center text-sm">
       <svg
         data-v-40670dad=""
         xmlns="http://www.w3.org/2000/svg"

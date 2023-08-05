@@ -8,7 +8,7 @@ interface Props {
 
 const UserPost: React.FC<Props> = ({ story }) => {
   return (
-    <ul className="flex flex-wrap pb-4 border-b-2 border-gray-100">
+    <ul className="flex flex-wrap pb-4 border-b-2 border-gray-300">
       {story?.users?.map((user) => (
         <li className=" rounded-lg p-1" key={user.id}>
           <a href="fb.com" className="flex gap-2 items-center">

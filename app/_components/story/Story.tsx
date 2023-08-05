@@ -8,7 +8,7 @@ interface Props {
 
 const Story: React.FC<Props> = ({ story }) => {
   return (
-    <li className="card w-96 bg-base-100 shadow-xl overflow-hidden">
+    <li className="card light:bg-base-100 shadow-xl overflow-hidden">
       <a href={`/story/${story?.slug}`}>
         <figure className="h-[140px] relative">
           <Image src="/wallpaper.jpg" alt="Shoes" fill />
