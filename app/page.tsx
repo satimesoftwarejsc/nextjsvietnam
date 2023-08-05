@@ -3,6 +3,7 @@ import Link from 'next/link'
 import BomMember from './_components/bomMember'
 import DevMember from './_components/devMember'
 import UserMember from './_components/userMember'
+import Footer from './_components/footer'
 
 
 import * as Icon from 'react-feather';
@@ -43,6 +44,20 @@ async function getAidrop1() {
   return res.json()
 }
 
+async function getPrice() {
+  const res = await fetch('https://api.dexscreener.com/latest/dex/pairs/fantom/0xd45900dbfe70cc9347ae6924796b2b988dc1d143')
+  // The return value is *not* serialized
+  // You can return Date, Map, Set, etc.
+
+  // Recommendation: handle errors
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error('Failed to fetch data')
+  }
+
+  return res.json()
+}
+
 export default async function Home() {
   /*  */
   const teamNumber = [1, 2, 3, 4, 5, 6, 7, 8]
@@ -62,7 +77,9 @@ export default async function Home() {
   const hasSendAirdrop1 = 1000000 - parseInt(remainingBalanceTokenAirdrop1)
   //console.log('remainingBalanceTokenAirdrop1: ',remainingBalanceTokenAirdrop1);
   const phantramAirdrop1 = hasSendAirdrop1 / 1000000 * 100
-
+  /* Price */
+  const price = await getPrice()
+  //console.log(price.pairs[0].priceUsd);
   return (
     <>
       <div className="hero min-h-screen" style={{ backgroundImage: 'url(wallpaper.jpg)' }}>
@@ -94,6 +111,10 @@ export default async function Home() {
               <Link href={'https://meet.google.com/nbb-ywbb-gmn'} className=' flex flex-row justify-center border border-slate-500 rounded p-2'>
                 <Image className=' rounded-full w-6 h-6 mr-2' src='/meet.png' width={50} height={50} alt='Open Source'></Image>
                 <p className='my-auto'>Meet link</p>
+              </Link>
+              <Link href={'https://dexscreener.com/fantom/0xd45900dbfe70cc9347ae6924796b2b988dc1d143'} className=' flex flex-row justify-center border border-slate-500 rounded p-2'>
+                <Image className=' rounded-full w-6 h-6 mr-2' src='/dexscreener.png' width={50} height={50} alt='Open Source'></Image>
+                <p className='my-auto text-xs'>Price: {price.pairs[0].priceUsd}</p>
               </Link>
             </div>
 
@@ -133,7 +154,7 @@ export default async function Home() {
       </div>
       <div className='hero min-h-screen justify-items-center '>
         <div className='max-w-xl text-center'>
-          <h2 className=' text-3xl font-black'>Đội ngũ</h2>
+          <h2 className=' text-3xl font-black mt-5'>Đội ngũ</h2>
           <p className='font-light justify-center ...'>
             Với mong muốn NextJsVietNam.Org là nơi học hỏi, trao đổi kiến thức của cộng đồng,
             ngày 27/7/2023 chúng tôi đã bắt tay vào phát triển cộng đồng NextJS Viet Nam.</p>
@@ -141,7 +162,7 @@ export default async function Home() {
           <div className='flex font-light justify-center ...'>
             <Link href={'https://docs.google.com/forms/d/e/1FAIpQLScBs4yXuMLKmX0tdXTvfEUCFWhqofISeGs881wdrGgw08uiiQ/viewform'} className=' underline my-auto mt-2 flex flex-row'>Tham gia<Icon.ExternalLink className='ml-2 w-4 h-4' /></Link>
           </div>
-          <div className=' grid grid-cols-6 gap-5 mt-5 justify-items-center'>
+          <div className=' grid lg:grid-cols-6 grid-cols-3 gap-5 mt-5 justify-items-center mx-5'>
             <BomMember></BomMember>
             <BomMember></BomMember>
             <BomMember></BomMember>
@@ -153,7 +174,7 @@ export default async function Home() {
           <div className='flex font-light justify-center ...'>
             <Link href={'https://docs.google.com/forms/d/e/1FAIpQLSfUzeFIkK-zmwybFhiSjWEMImqpw4EG3K3g5f2wpuPYPT8-4Q/viewform'} className=' underline my-auto flex flex-row'>Tham gia<Icon.ExternalLink className='ml-2 w-4 h-4' /></Link>
           </div>
-          <div className=' grid grid-cols-10 gap-5 mt-5 justify-items-center'>
+          <div className=' grid lg:grid-cols-8 grid-cols-4 gap-5 mt-5 justify-items-center mx-5'>
             <DevMember></DevMember>
             <DevMember></DevMember>
             <DevMember></DevMember>
@@ -169,7 +190,7 @@ export default async function Home() {
           <div className='flex font-light justify-center ...'>
             <Link href={'#'} className=' underline my-auto flex flex-row'>Đăng ký<Icon.ExternalLink className='ml-2 w-4 h-4' /></Link>
           </div>
-          <div className=' grid grid-cols-12 gap-5 mt-5 justify-items-center'>
+          <div className=' grid lg:grid-cols-8 grid-cols-4 gap-5 mt-5 justify-items-center mx-5'>
             <UserMember></UserMember>
             <UserMember></UserMember>
             <UserMember></UserMember>
@@ -239,34 +260,7 @@ export default async function Home() {
         </div>
 
       </div>
-      <footer className="footer p-10 bg-base-200 text-base-content">
-        <div className='flex flex-col'>
-          <Image className=' w-56' src='/nextjs-logo.png' width={300} height={100} alt='NextJs Viet Nam'></Image>
-          <p>Nextjsvietnam.org. Building since 2023</p>
-          <p className='-mt-2 text-xs'>Development by you.</p>
-        </div>
-        <div>
-          <span className="footer-title">Cộng đồng</span>
-          <a className="link link-hover">Người dùng</a>
-          <a className="link link-hover">Đội phát triển</a>
-          <a className="link link-hover">Thành viên</a>
-          <a className="link link-hover">Nhà tài trợ</a>
-          
-        </div>
-        <div>
-          <span className="footer-title">Tiện ích</span>
-          <a className="link link-hover">Hỏi/đáp</a>
-          <a className="link link-hover">Kinh nghiệm phát triển</a>
-          <a className="link link-hover">Tài liệu phát triển</a>
-          <a className="link link-hover">Tiện ích nhỏ</a>
-        </div>
-        <div>
-          <span className="footer-title">Pháp luật</span>
-          <a className="link link-hover">Chính sách sử dụng và quy định chung</a>
-          <a className="link link-hover">Chính sách bảo mật thông tin</a>
-          <a className="link link-hover">Chính sách quyền riêng tư</a>
-        </div>
-      </footer>
+      <Footer></Footer>
     </>
 
   )
