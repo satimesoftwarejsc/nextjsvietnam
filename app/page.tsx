@@ -43,6 +43,20 @@ async function getAidrop1() {
   return res.json()
 }
 
+async function getPrice() {
+  const res = await fetch('https://api.dexscreener.com/latest/dex/pairs/fantom/0xd45900dbfe70cc9347ae6924796b2b988dc1d143')
+  // The return value is *not* serialized
+  // You can return Date, Map, Set, etc.
+
+  // Recommendation: handle errors
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error('Failed to fetch data')
+  }
+
+  return res.json()
+}
+
 export default async function Home() {
   /*  */
   const teamNumber = [1, 2, 3, 4, 5, 6, 7, 8]
@@ -62,7 +76,9 @@ export default async function Home() {
   const hasSendAirdrop1 = 1000000 - parseInt(remainingBalanceTokenAirdrop1)
   //console.log('remainingBalanceTokenAirdrop1: ',remainingBalanceTokenAirdrop1);
   const phantramAirdrop1 = hasSendAirdrop1 / 1000000 * 100
-
+  /* Price */
+  const price = await getPrice()
+  //console.log(price.pairs[0].priceUsd);
   return (
     <>
       <div className="hero min-h-screen" style={{ backgroundImage: 'url(wallpaper.jpg)' }}>
@@ -94,6 +110,10 @@ export default async function Home() {
               <Link href={'https://meet.google.com/nbb-ywbb-gmn'} className=' flex flex-row justify-center border border-slate-500 rounded p-2'>
                 <Image className=' rounded-full w-6 h-6 mr-2' src='/meet.png' width={50} height={50} alt='Open Source'></Image>
                 <p className='my-auto'>Meet link</p>
+              </Link>
+              <Link href={'https://dexscreener.com/fantom/0xd45900dbfe70cc9347ae6924796b2b988dc1d143'} className=' flex flex-row justify-center border border-slate-500 rounded p-2'>
+                <Image className=' rounded-full w-6 h-6 mr-2' src='/dexscreener.png' width={50} height={50} alt='Open Source'></Image>
+                <p className='my-auto'>Price: {price.pairs[0].priceUsd}</p>
               </Link>
             </div>
 
