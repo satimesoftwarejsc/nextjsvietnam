@@ -15,7 +15,7 @@ export default async function Footer() {
                     <a className="link link-hover">Người dùng</a>
                     <a className="link link-hover">Đội phát triển</a>
                     <a className="link link-hover">Thành viên</a>
-                    <a className="link link-hover">Nhà tài trợ</a>
+                    <Link href={'/tokenomics'} className="link link-hover">Tokenomics</Link>
 
                 </div>
                 <div>
