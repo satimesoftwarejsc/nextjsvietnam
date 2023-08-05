@@ -113,7 +113,7 @@ export default async function Home() {
               </Link>
               <Link href={'https://dexscreener.com/fantom/0xd45900dbfe70cc9347ae6924796b2b988dc1d143'} className=' flex flex-row justify-center border border-slate-500 rounded p-2'>
                 <Image className=' rounded-full w-6 h-6 mr-2' src='/dexscreener.png' width={50} height={50} alt='Open Source'></Image>
-                <p className='my-auto'>Price: {price.pairs[0].priceUsd}</p>
+                <p className='my-auto text-xs'>Price: {price.pairs[0].priceUsd}</p>
               </Link>
             </div>
 
@@ -161,7 +161,7 @@ export default async function Home() {
           <div className='flex font-light justify-center ...'>
             <Link href={'https://docs.google.com/forms/d/e/1FAIpQLScBs4yXuMLKmX0tdXTvfEUCFWhqofISeGs881wdrGgw08uiiQ/viewform'} className=' underline my-auto mt-2 flex flex-row'>Tham gia<Icon.ExternalLink className='ml-2 w-4 h-4' /></Link>
           </div>
-          <div className=' grid grid-cols-6 gap-5 mt-5 justify-items-center'>
+          <div className=' grid grid-cols-6 gap-5 mt-5 justify-items-center mx-5'>
             <BomMember></BomMember>
             <BomMember></BomMember>
             <BomMember></BomMember>
@@ -173,7 +173,7 @@ export default async function Home() {
           <div className='flex font-light justify-center ...'>
             <Link href={'https://docs.google.com/forms/d/e/1FAIpQLSfUzeFIkK-zmwybFhiSjWEMImqpw4EG3K3g5f2wpuPYPT8-4Q/viewform'} className=' underline my-auto flex flex-row'>Tham gia<Icon.ExternalLink className='ml-2 w-4 h-4' /></Link>
           </div>
-          <div className=' grid grid-cols-10 gap-5 mt-5 justify-items-center'>
+          <div className=' grid lg:grid-cols-8 grid-cols-4 gap-5 mt-5 justify-items-center mx-5'>
             <DevMember></DevMember>
             <DevMember></DevMember>
             <DevMember></DevMember>
@@ -189,7 +189,7 @@ export default async function Home() {
           <div className='flex font-light justify-center ...'>
             <Link href={'#'} className=' underline my-auto flex flex-row'>Đăng ký<Icon.ExternalLink className='ml-2 w-4 h-4' /></Link>
           </div>
-          <div className=' grid grid-cols-12 gap-5 mt-5 justify-items-center'>
+          <div className=' grid lg:grid-cols-8 grid-cols-4 gap-5 mt-5 justify-items-center mx-5'>
             <UserMember></UserMember>
             <UserMember></UserMember>
             <UserMember></UserMember>
@@ -285,6 +285,7 @@ export default async function Home() {
           <a className="link link-hover">Chính sách sử dụng và quy định chung</a>
           <a className="link link-hover">Chính sách bảo mật thông tin</a>
           <a className="link link-hover">Chính sách quyền riêng tư</a>
+          <a className="link link-hover">Chính sách sở hữu token</a>
         </div>
       </footer>
     </>
