@@ -1,12 +1,10 @@
-import React from 'react'
-import QuestionClient from './QuestionClient'
+import React from "react";
+import QuestionsClient from "./QuestionsClient";
 
-type Props = {}
+type Props = {};
 
 function QuestionPage({}: Props) {
-  return (
-    <QuestionClient />
-  )
+  return <QuestionsClient />;
 }
 
-export default QuestionPage
+export default QuestionPage;
