@@ -3,6 +3,7 @@ import Link from 'next/link'
 import BomMember from './_components/bomMember'
 import DevMember from './_components/devMember'
 import UserMember from './_components/userMember'
+import Footer from './_components/footer'
 
 
 import * as Icon from 'react-feather';
@@ -153,7 +154,7 @@ export default async function Home() {
       </div>
       <div className='hero min-h-screen justify-items-center '>
         <div className='max-w-xl text-center'>
-          <h2 className=' text-3xl font-black'>Đội ngũ</h2>
+          <h2 className=' text-3xl font-black mt-5'>Đội ngũ</h2>
           <p className='font-light justify-center ...'>
             Với mong muốn NextJsVietNam.Org là nơi học hỏi, trao đổi kiến thức của cộng đồng,
             ngày 27/7/2023 chúng tôi đã bắt tay vào phát triển cộng đồng NextJS Viet Nam.</p>
@@ -161,7 +162,7 @@ export default async function Home() {
           <div className='flex font-light justify-center ...'>
             <Link href={'https://docs.google.com/forms/d/e/1FAIpQLScBs4yXuMLKmX0tdXTvfEUCFWhqofISeGs881wdrGgw08uiiQ/viewform'} className=' underline my-auto mt-2 flex flex-row'>Tham gia<Icon.ExternalLink className='ml-2 w-4 h-4' /></Link>
           </div>
-          <div className=' grid grid-cols-6 gap-5 mt-5 justify-items-center mx-5'>
+          <div className=' grid lg:grid-cols-6 grid-cols-3 gap-5 mt-5 justify-items-center mx-5'>
             <BomMember></BomMember>
             <BomMember></BomMember>
             <BomMember></BomMember>
@@ -259,35 +260,7 @@ export default async function Home() {
         </div>
 
       </div>
-      <footer className="footer p-10 bg-base-200 text-base-content">
-        <div className='flex flex-col'>
-          <Image className=' w-56' src='/nextjs-logo.png' width={300} height={100} alt='NextJs Viet Nam'></Image>
-          <p>Nextjsvietnam.org. Building since 2023</p>
-          <p className='-mt-2 text-xs'>Development by you.</p>
-        </div>
-        <div>
-          <span className="footer-title">Cộng đồng</span>
-          <a className="link link-hover">Người dùng</a>
-          <a className="link link-hover">Đội phát triển</a>
-          <a className="link link-hover">Thành viên</a>
-          <a className="link link-hover">Nhà tài trợ</a>
-          
-        </div>
-        <div>
-          <span className="footer-title">Tiện ích</span>
-          <a className="link link-hover">Hỏi/đáp</a>
-          <a className="link link-hover">Kinh nghiệm phát triển</a>
-          <a className="link link-hover">Tài liệu phát triển</a>
-          <a className="link link-hover">Tiện ích nhỏ</a>
-        </div>
-        <div>
-          <span className="footer-title">Pháp luật</span>
-          <a className="link link-hover">Chính sách sử dụng và quy định chung</a>
-          <a className="link link-hover">Chính sách bảo mật thông tin</a>
-          <a className="link link-hover">Chính sách quyền riêng tư</a>
-          <a className="link link-hover">Chính sách sở hữu token</a>
-        </div>
-      </footer>
+      <Footer></Footer>
     </>
 
   )
