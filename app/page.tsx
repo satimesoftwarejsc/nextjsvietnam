@@ -133,15 +133,10 @@ export default async function Home() {
 
             <div className="form-control w-full ">
               <div className='flex justify-center ...'>
-                <Link href={'https://docs.google.com/forms/d/1yQyCcLNuhgOCGm9Ylz7V3GvbxCRhf0cE39yxlghZ7yo/edit?pli=1'} className=' underline my-auto mt-2 flex flex-row'>Nhận Airdrop #1 <Icon.ExternalLink className='ml-2 w-4 h-4' /></Link>
+                <Link href={'https://docs.google.com/forms/d/1yQyCcLNuhgOCGm9Ylz7V3GvbxCRhf0cE39yxlghZ7yo/edit?pli=1'} className=' underline my-auto mt-2 flex flex-row'>Nhận Airdrop <Icon.ExternalLink className='ml-2 w-4 h-4' /></Link>
 
               </div>
-              <label className="label">
-                <span className="label-text">Tiến độ</span>
-                <span className="label-text-alt flex flex-row">{hasSendAirdrop1.toLocaleString('it-IT')}/1.000.000 <Link href={'https://ftmscan.com/token/0xb8058e311b451406bff63a11582b740a806b09e4?a=0xc78fd70a999a938ed939809fedd40e744d8c2bd9'} className='ml-2 underline'>NextJs</Link></span>
-
-              </label>
-              <progress className="progress progress-secondary w-full h-3" value={phantramAirdrop1} max="100"></progress>
+              
             </div>
 
             <div className='flex justify-center ...'>

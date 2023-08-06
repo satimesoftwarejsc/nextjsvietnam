@@ -11,6 +11,13 @@ export default async function Footer() {
                     <p className='-mt-2 text-xs'>Development by you.</p>
                 </div>
                 <div>
+                    <span className="footer-title">Release Link</span>
+                    <Link href={"#"} className="link link-hover">Q/A</Link>
+                    <Link href={"#"} className="link link-hover">Story</Link>
+                    <a className="link link-hover">###</a>
+                    <a className="link link-hover">###</a>
+                </div>
+                <div>
                     <span className="footer-title">Cộng đồng</span>
                     <a className="link link-hover">Người dùng</a>
                     <a className="link link-hover">Đội phát triển</a>
