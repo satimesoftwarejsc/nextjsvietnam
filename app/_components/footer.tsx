@@ -12,8 +12,8 @@ export default async function Footer() {
                 </div>
                 <div>
                     <span className="footer-title">Release Link</span>
-                    <Link href={"#"} className="link link-hover">Q/A</Link>
-                    <Link href={"#"} className="link link-hover">Story</Link>
+                    <Link href={"/questions"} className="link link-hover">Q/A</Link>
+                    <Link href={"/story"} className="link link-hover">Story</Link>
                     <a className="link link-hover">###</a>
                     <a className="link link-hover">###</a>
                 </div>

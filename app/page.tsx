@@ -124,8 +124,8 @@ export default async function Home() {
 
               </div>
               <label className="label">
-                <span className="label-text">Tiến độ</span>
-                <span className="label-text-alt flex flex-row">{hasSendBom.toLocaleString('it-IT')}/1.000.000 <Link href={'https://ftmscan.com/token/0xb8058e311b451406bff63a11582b740a806b09e4?a=0xc502f799d90b694b815800b61b1d790f91cb2190'} className='ml-2 underline'>NextJs</Link></span>
+                <span className="label-text text-white">Tiến độ</span>
+                <span className="label-text-alt text-white flex flex-row">{hasSendBom.toLocaleString('it-IT')}/1.000.000 <Link href={'https://ftmscan.com/token/0xb8058e311b451406bff63a11582b740a806b09e4?a=0xc502f799d90b694b815800b61b1d790f91cb2190'} className='ml-2 underline'>NextJs</Link></span>
 
               </label>
               <progress className="progress progress-primary w-full h-6" value={phantramBom} max="100"></progress>
