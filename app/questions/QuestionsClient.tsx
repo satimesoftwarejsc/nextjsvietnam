@@ -6,60 +6,15 @@ import { GiJusticeStar } from "react-icons/gi";
 import WidgetTitle from "../_components/widget/WidgetTitle";
 import WidgetDesc from "../_components/widget/WidgetDesc";
 import QuestionItem from "../_components/questionitem";
+import SideBar from "../_components/sidebar";
 type Props = {};
 
 function QuestionsClient({}: Props) {
-  const [onOpen, setOnOpen] = useState(false);
-  const handleModal = () => {
-    setOnOpen(!onOpen);
-  };
   return (
     <div className="h-full">
       <div className="max-w-7xl mx-auto grid grid-cols-12">
         <div className={`sm:col-span-2  h-full border-r relative`}>
-          <span className="block sm:hidden" onClick={handleModal}>
-            <FaBars />
-          </span>
-          <ul
-            className={`menu h-full p-0  ${
-              onOpen ? "block absolute top-4 left-0" : "hidden"
-            } sm:block text-xs md:text-sm w-full`}
-          >
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li>
-              <span>PUBLIC</span>
-              <ul className="before:w-0">
-                <li>
-                  <Link href="/questions">
-                    <FaGlobeAsia />
-                    Questions
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/tags">Tags</Link>
-                </li>
-                <li>
-                  <Link href="/users">Users</Link>
-                </li>
-                <li>
-                  <Link href="/companies">Companies</Link>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <span>COLLECTIVES</span>
-              <ul className="menu before:w-0 m-0 p-0">
-                <li className="m-0">
-                  <Link href="/collectives">
-                    <GiJusticeStar />
-                    Collectives
-                  </Link>
-                </li>
-              </ul>
-            </li>
-          </ul>
+          <SideBar />
         </div>
         <div className="lg:col-span-7 sm:col-span-9 col-span-12 border-l-gray-300 mr-6">
           <div className="py-6 pl-6  border-b">
