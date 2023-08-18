@@ -4,8 +4,16 @@ import React from "react";
 
 type Props = {};
 
-function QuestionsClient({  }) {
-  return <Link href={`/questions/${questionId}`}>QuestionsClient</Link>;
+function QuestionsClient() {
+  return (
+    <>
+      {[1, 2, 3].map((item) => (
+        <Link key={item} href={`/questions/${item}`}>
+          {item}
+        </Link>
+      ))}
+    </>
+  );
 }
 
 export default QuestionsClient;

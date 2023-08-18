@@ -1,11 +1,9 @@
-import React from 'react'
+import React from "react";
 
-type Props = {}
+type Props = {};
 
 function QuestionId({}: Props) {
-  return (
-    <div>QuestionId</div>
-  )
+  return <div>QuestionId</div>;
 }
 
-export default QuestionId
+export default QuestionId;
