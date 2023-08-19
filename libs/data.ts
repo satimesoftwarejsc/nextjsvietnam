@@ -6,7 +6,22 @@ export type POST = {
 type TAG = {
   id: string;
   title: string;
-  description: string;
+  description?: string;
+};
+type user = {
+  userId?: string;
+  userName?: string;
+  imageUser?: string;
+};
+type QUESTION = {
+  id: string;
+  vote: number;
+  answer: number;
+  view: number;
+  title: string;
+  desc: string;
+  tags: TAG[];
+  user: user;
 };
 let posts: POST[] = [];
 
@@ -44,5 +59,51 @@ export const tags: TAG[] = [
     title: "next.js",
     description:
       "Next.js is a minimalistic framework for server-rendered React applications as well as statically exported React apps.",
+  },
+];
+export const questions: QUESTION[] = [
+  {
+    id: "1",
+    vote: 1,
+    answer: 2,
+    view: 2,
+    title: "How to create react app",
+    desc: "I have a response returned from an API",
+    tags: [
+      {
+        id: "1",
+        title: "react js",
+      },
+      {
+        id: "2",
+        title: "nextjs",
+      },
+    ],
+    user: {
+      userId: "1",
+      userName: "Le Trong Hiep",
+    },
+  },
+  {
+    id: "2",
+    vote: 1,
+    answer: 2,
+    view: 2,
+    title: "How to using vite create react app",
+    desc: "I have a response returned from an API",
+    tags: [
+      {
+        id: "1",
+        title: "react js",
+      },
+      {
+        id: "2",
+        title: "vite",
+      },
+    ],
+    user: {
+      userId: "2",
+      userName: "Cam Thi Lieu",
+    },
   },
 ];
