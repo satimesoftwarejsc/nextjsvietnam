@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import UserMember from "../../_components/userMember"
-import DevMember from '../../_components/devMember'
+import UserMember from "../../_components/user_member"
+import DevMember from '../../_components/dev_member'
 import CouncilsMember from '../../_components/councilsmember'
 import * as Icon from 'react-feather';
 import { Metadata } from 'next'
